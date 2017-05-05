@@ -1,0 +1,22 @@
+{
+  "name": "chrome-headless-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chromeLauncher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratheekrebala/chrome-headless-nodejs.git"
+  },
+  "author": "Pratheek Rebala <pratheek.rebala@time.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pratheekrebala/chrome-headless-nodejs/issues"
+  },
+  "homepage": "https://github.com/pratheekrebala/chrome-headless-nodejs#readme",
+  "dependencies": {
+    "chrome-remote-interface": "^0.22.0"
+  }
+}
