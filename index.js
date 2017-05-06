@@ -33,9 +33,11 @@ function initialize(argv){
         const delay = argv.delay || 0;
         const userAgent = argv.userAgent;
         const fullPage = argv.full;
+        const port = argv.port || 9222;
 
         // Start the Chrome Debugging Protocol
-        CDP(async function(client) {
+        CDP({port: port}, async function(client) {
+          console.log('Connected');
           // Extract used DevTools domains.
           const {DOM, Emulation, Network, Page, Runtime, Browser, Debugger} = client;
           // Enable events on domains we are interested in.
@@ -47,8 +49,6 @@ function initialize(argv){
           if (userAgent) {
             await Network.setUserAgentOverride({userAgent});
           }
-
-
           /*Browser.setWindowBounds({bounds:{
             windowState: 'fullscreen'
           }})*/
